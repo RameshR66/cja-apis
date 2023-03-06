@@ -229,6 +229,339 @@ The following example shows the response data for the request on project `6091a1
   "created": "2021-05-04T19:31:12Z"
 }
 ```
+## Retrieving a Single Project Definition
+
+You can retrieve project entire panels and its information if you know the project `id`. To find the project `id`, you can refer to the report descriptions or find it by using the multiple projects endpoint.
+
+### Example Request
+
+The following example requests data on the project `6091a10005c7706c0acdd751`:
+
+`GET https://cja.adobe.io/projects/6091a10005c7706c0acdd751?expansion=definition`
+
+### Example Response
+
+The following example shows the response data with detailed panels information for the request on project `6091a10005c7706c0acdd751`:
+
+```
+{
+    "id": "6091a10005c7706c0acdd751",
+    "name": "New Project",
+    "description": "",
+    "type": "project",
+    "definition": {
+        "additionalCuratedComponents": [],
+        "colorScheme": {
+            "id": "default",
+            "label": "",
+            "value": [
+                "#00C0C7",
+                "#5144D3",
+                "#E8871A",
+                "#DA3490",
+                "#9089FA",
+                "#47E26F",
+                "#2780EB",
+                "#6F38B1",
+                "#DFBF03",
+                "#CB6F10",
+                "#268D6C",
+                "#9BEC54",
+                "#5EABFA",
+                "#BE40CC",
+                "#F56BB7",
+                "#FEE02D"
+            ]
+        },
+        "countRepeatInstances": true,
+        "currentWorkspaceIndex": 0,
+        "customColorSchemes": [],
+        "internalAnnotations": [],
+        "isCurated": false,
+        "showAnnotations": true,
+        "version": "58",
+        "viewDensity": "expanded",
+        "workspaces": [
+            {
+                "id": "00000000-0000-0000-0000-000000000000",
+                "name": "",
+                "panels": [
+                    {
+                        "collapsed": false,
+                        "dateRange": {
+                            "__entity__": true,
+                            "type": "DateRange",
+                            "__metaData__": {
+                                "definition": "td-00d/td-00d"
+                            }
+                        },
+                        "datesAreRelativeToPanel": false,
+                        "description": "",
+                        "id": "00000000-0000-0000-0000-000000000000",
+                        "name": "New Panel",
+                        "position": {
+                            "autoHeight": 527,
+                            "autoSize": true,
+                            "width": 100,
+                            "x": 0,
+                            "y": 0
+                        },
+                        "reportSuite": {
+                            "id": "dv_000000000000000000",
+                            "__entity__": true,
+                            "type": "ReportSuite",
+                            "__metaData__": {
+                                "name": "Sample_Dataview",
+                                "rsid": "dv_000000000000000000"
+                            }
+                        },
+                        "segmentGroups": [
+                            {
+                                "componentOptions": [
+                                    {
+                                        "component": {
+                                            "id": "0000000000000000000000000@AdobeOrg_6091a10005c7706c0acdd751",
+                                            "__entity__": true,
+                                            "type": "Segment",
+                                            "__metaData__": {
+                                                "name": "Category = Sample Segment"
+                                            }
+                                        },
+                                        "isActive": true
+                                    }
+                                ],
+                                "groupName": "",
+                                "hasNoFilter": false,
+                                "showGroupName": true
+                            }
+                        ],
+                        "subPanels": [
+                            {
+                                "collapsed": false,
+                                "description": "",
+                                "id": "00000000-0000-0000-0000-000000000000",
+                                "isQuickInsightsSubPanel": false,
+                                "linkedSourceId": "",
+                                "position": {
+                                    "autoHeight": 356,
+                                    "autoSize": true,
+                                    "width": 100,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                "reportlet": {
+                                    "advancedMode": false,
+                                    "advancedSettings": {
+                                        "rows": [],
+                                        "tableState": "builder"
+                                    },
+                                    "columnTree": {
+                                        "_computedValues": [],
+                                        "dataSettings": {
+                                            "advancedItemLimit": 5,
+                                            "advancedItemSearch": {
+                                                "alwaysExcludedItems": [],
+                                                "operator": "AND",
+                                                "rules": []
+                                            }
+                                        },
+                                        "id": "000000-00",
+                                        "name": "",
+                                        "nodes": [
+                                            {
+                                                "_computedValues": [],
+                                                "component": {
+                                                    "id": "metrics/_Metric1",
+                                                    "__entity__": true,
+                                                    "type": "Metric",
+                                                    "__metaData__": {
+                                                        "name": "Sample Metric"
+                                                    }
+                                                },
+                                                "dataSettings": {
+                                                    "advancedItemLimit": 5,
+                                                    "advancedItemSearch": {
+                                                        "alwaysExcludedItems": [],
+                                                        "operator": "AND",
+                                                        "rules": []
+                                                    }
+                                                },
+                                                "id": "000000-00",
+                                                "name": "Sample Metric",
+                                                "nodes": [],
+                                                "selectionCoordinates": [],
+                                                "tableCellDisplay": {
+                                                    "conditionalFormattingOpts": {
+                                                        "autoGenerate": true,
+                                                        "colorPalette": "#ffa48c,#ffcb94,#fff19b,#cadf7d,#95cc5f",
+                                                        "usePercentLimits": false
+                                                    },
+                                                    "location": "behindNumber",
+                                                    "type": {
+                                                        "anomaly": true,
+                                                        "background": true,
+                                                        "backgroundType": "bar",
+                                                        "comparison": "none",
+                                                        "interpretZeroAsNoValue": false,
+                                                        "number": true,
+                                                        "percent": true,
+                                                        "showAnomaly": true,
+                                                        "showGrandTotal": true,
+                                                        "showSparklines": true,
+                                                        "showTotals": true,
+                                                        "wrapHeaderText": true
+                                                    }
+                                                },
+                                                "visible": true
+                                            },
+                                            {
+                                                "_computedValues": [],
+                                                "component": {
+                                                    "id": "metrics/_Metric2",
+                                                    "__entity__": true,
+                                                    "type": "Metric",
+                                                    "__metaData__": {
+                                                        "name": "Sample Metric 1"
+                                                    }
+                                                },
+                                                "dataSettings": {
+                                                    "advancedItemLimit": 5,
+                                                    "advancedItemSearch": {
+                                                        "alwaysExcludedItems": [],
+                                                        "operator": "AND",
+                                                        "rules": []
+                                                    }
+                                                },
+                                                "id": "000000-00",
+                                                "name": "Sample Metric 1",
+                                                "nodes": [],
+                                                "selectionCoordinates": [],
+                                                "tableCellDisplay": {
+                                                    "conditionalFormattingOpts": {
+                                                        "autoGenerate": true,
+                                                        "colorPalette": "#ffa48c,#ffcb94,#fff19b,#cadf7d,#95cc5f",
+                                                        "usePercentLimits": false
+                                                    },
+                                                    "location": "behindNumber",
+                                                    "type": {
+                                                        "anomaly": true,
+                                                        "background": true,
+                                                        "backgroundType": "bar",
+                                                        "comparison": "none",
+                                                        "interpretZeroAsNoValue": false,
+                                                        "number": true,
+                                                        "percent": true,
+                                                        "showAnomaly": false,
+                                                        "showGrandTotal": true,
+                                                        "showSparklines": true,
+                                                        "showTotals": true,
+                                                        "wrapHeaderText": true
+                                                    }
+                                                },
+                                                "visible": true
+                                            }
+                                        ],
+                                        "selectionCoordinates": [],
+                                        "tableCellDisplay": {
+                                            "conditionalFormattingOpts": {
+                                                "autoGenerate": true,
+                                                "colorPalette": "#ffa48c,#ffcb94,#fff19b,#cadf7d,#95cc5f",
+                                                "usePercentLimits": false
+                                            },
+                                            "location": "behindNumber",
+                                            "type": {
+                                                "anomaly": true,
+                                                "background": true,
+                                                "backgroundType": "bar",
+                                                "comparison": "none",
+                                                "interpretZeroAsNoValue": false,
+                                                "number": true,
+                                                "percent": true,
+                                                "showAnomaly": false,
+                                                "showGrandTotal": true,
+                                                "showSparklines": true,
+                                                "showTotals": true,
+                                                "wrapHeaderText": true
+                                            }
+                                        },
+                                        "visible": true
+                                    },
+                                    "freeformTable": {
+                                        "alignDatesForTimeDimension": true,
+                                        "attributionSettings": [],
+                                        "breakdowns": [],
+                                        "collapsed": false,
+                                        "columnWidths": [
+                                            100,
+                                            100,
+                                            100
+                                        ],
+                                        "dimension": {
+                                            "id": "variables/_Dimension",
+                                            "__entity__": true,
+                                            "type": "Dimension",
+                                            "__metaData__": {
+                                                "name": "Sample Dimension"
+                                            }
+                                        },
+                                        "pagination": {
+                                            "currentPage": 0,
+                                            "viewBy": 5
+                                        },
+                                        "search": {
+                                            "alwaysExcludedItems": [],
+                                            "operator": "AND",
+                                            "rules": []
+                                        },
+                                        "selectionCoordinates": [
+                                            "0,-1",
+                                            "1,-1",
+                                            "2,-1"
+                                        ],
+                                        "settings": {
+                                            "breakdownByPosition": false,
+                                            "rowBasedPercentages": false,
+                                            "totalsType": "allVisits"
+                                        },
+                                        "sort": {
+                                            "asc": false,
+                                            "columnId": "000000-00",
+                                            "labelColumn": false
+                                        },
+                                        "staticRows": [],
+                                        "statistics": {
+                                            "functions": [],
+                                            "ignoreZeros": true
+                                        }
+                                    },
+                                    "isConfigVisible": true,
+                                    "isReadOnly": false,
+                                    "showAnnotations": true,
+                                    "showControls": true,
+                                    "type": "FreeformReportlet"
+                                },
+                                "swatchColor": "#00C0C7",
+                                "type": "genericSubPanel",
+                                "visible": true,
+                                "visualizationIndex": 1
+                            }
+                        ],
+                        "type": "panel"
+                    }
+                ]
+            }
+        ]
+    },
+    "dataId": "dv_000000000000000000",
+    "owner": {
+        "imsUserId": "000000000000000000000000@000000000000000000000000",
+        "ownerId": "000000000000000000000000@000000000000000000000000",
+        "name": null,
+        "type": "User"
+    },
+    "created": "2023-03-06T04:31:32Z"
+}
+```
 
 ## Deleting a Project
 
